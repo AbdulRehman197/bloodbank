@@ -1,0 +1,20 @@
+{{#each idea}}
+<div class="card mb-2" >
+    <div class="card-body ">
+        <h4>Donor Name : {{title}}</h4>
+        <hr/>
+        <h6>BloodGroup : {{bloodgroup}}</h6>
+        <hr/>
+        <div class="btn-group " role="group" aria-label="Basic example">
+            <a href="ideas/edit/{{id}}" class="btn btn-outline-secondary mr-2">Edit</a>
+            <form action="/ideas/{{id}}?_method=DELETE" method="POST">
+                <input type="hidden" value="DELETE" name="_method">
+                <input type="submit" class="btn btn-outline-danger" value="Delete">
+            </form>
+            <a href="ideas/details/{{id}}" class="btn btn-outline-info ml-2">Details</a>
+        </div>
+    </div>
+</div>
+{{else}}
+<p>there is no video yet</p>
+{{/each}}

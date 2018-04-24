@@ -1,0 +1,32 @@
+
+
+<div class="jumbotron">
+    <div class="card text-white bg-danger  ml-2 mt-5"  style="opacity:0.8" style="max-width: 70rem;">
+  <div class="card-header">Blood Information</div>
+  <div class="card-body">
+  <div class="container">
+  <h2>Donor Information Table</h2>      
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Donor Name</th>
+        <th>BloodGroup</th>
+        <th>Phone</th>
+         <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{idea.title}}</td>
+        <td>{{idea.bloodgroup}}</td>
+        <td>0{{idea.phone}}</td>
+        <td>{{idea.details}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+  </div>
+ <form action="/ideas/{{idea.id}}"></form>
+  <a class="btn btn-danger btn-lg" href="/ideas" role="button">Back to main page</a>
+</div>

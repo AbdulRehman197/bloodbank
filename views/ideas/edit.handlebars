@@ -1,0 +1,32 @@
+{{#each errors}}
+<div class="alert alert-danger" role="alert"> {{text}}
+</div>
+{{else}} {{/each}}
+<div class="card">
+    <div class="card-body">
+        <h3>Edit BloodGroup Details</h3>
+        <form action="/ideas/{{idea.id}}?_method=PUT" method="POST" class="form-group">
+            <input type="hidden" name "_method" value="PUT">
+            <label for="title">Name</label>
+            <input type="text" class="form-control" name="title" value="{{idea.title}}" />
+            <label for="title">BloodGroup</label>
+            <select class="form-control" name="bloodgroup" value="{{idea.bloodgroup}}">
+                <option>O+</option>
+                <option>O-</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+            <label for="title">Phone</label>
+            <input type="number" class="form-control" name="phone" value={{idea.phone}}>
+            <label for="details">Details</label>
+            <textarea type="text" class="form-control" name="details">{{idea.details}}</textarea>
+            <br/>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
